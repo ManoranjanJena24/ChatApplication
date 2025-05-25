@@ -306,3 +306,51 @@ UNDER SETTINGS IN CLOUDINARY GOING TO API KEYS SECTION
 
 
 so whenever we are refreshing our application we will be calling this function router.get("/check",protectRoute,checkAuth)
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+
+const messageSchema=new mongoose.Schema(
+{
+senderId:{
+type:mongoose.Schema.Types.ObjectId,
+ref:'User',
+required:true,
+
+},
+receiverID:{
+    type:mongoose.Schema.Types.ObjectId,
+    ref:"User",
+    required:true
+},
+text:{
+    type:String
+},
+image:{
+    type:String
+},
+
+
+},{
+    timestamps:true
+}  
+
+)
+
+const Message = mongoose.model("Message",messageSchema);
+export default Message;
+
+
+
+This basically just tells to mongodb that that senderId and receiverId will bee reference to **User** model
+
+
+text and image will not be required true because  some messages will be only text and some wiuloll be image and some will be both
+
+ 
+
