@@ -80,6 +80,31 @@ step3) inside src folder we go index.css and add the the code  at the top
 
 
 
+==============================================================================================================================================
+
+Basic Setup for daisyui installation
+
+
+step1: 1stly  we have to install the package
+
+npm i -D daisyui@latest
+
+
+
+step 2: Add daisyUI to app.css:  **but we will add it in the index.css**
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 
 
