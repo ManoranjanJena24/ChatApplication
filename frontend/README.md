@@ -97,7 +97,30 @@ step 2: Add daisyUI to app.css:  **but we will add it in the index.css**
 @plugin "daisyui";
 
 
+
 ------------------------------------------------------------------------------------------------------------------------------------------
+
+in the main.jsx file we have to add <BrowserRouter> we have to wrap
+
+
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <BrowserRouter>
+    <App />
+    </BrowserRouter>
+  </StrictMode>,
+)
+
+
+
+### Now we can build our routes 
+
+
 
 
 
